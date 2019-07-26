@@ -18,9 +18,19 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.two-dropdowns .custom-dropdown-class{
+  margin:10px;
+}
 .App-link {
   color: #61dafb;
+}
+.col-lg-4 {
+  overflow: hidden;
+}
+
+.col-md-3 {
+  padding-bottom: 100%;
+  margin-bottom: -100%;
 }
 
 @keyframes App-logo-spin {
@@ -30,4 +40,7 @@
   to {
     transform: rotate(360deg);
   }
+}
+body{
+  background-color: #f4f7f6;
 }

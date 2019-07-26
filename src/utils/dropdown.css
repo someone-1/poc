@@ -1,0 +1,29 @@
+.custom-dropdown-class .btn-primary{
+    background-color: #f4f7f6;
+    border: 1px solid #E6EAEA;
+    color: black;
+}
+.custom-dropdown-class:hover .btn-primary{
+    background-color: #f4f7f6;
+    border: 1px solid #E6EAEA;
+    color: black;
+}
+
+.custom-dropdown-class .dropdown{
+    margin-left: 15px;
+    display: inline-block;
+    text-transform: capitalize;
+
+}
+.custom-dropdown-class{
+    text-transform: capitalize;
+}
+.custom-input-class input{
+    margin-top: 0px !important;
+    margin-left: 10px;
+}
+.custom-input-class {
+    margin: 10px;
+    padding: 10px;
+    height: 40px;
+}

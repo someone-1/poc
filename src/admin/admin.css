@@ -1,0 +1,18 @@
+.lenght{
+    width: 50%;
+    text-align: center;
+    padding: 30px;
+}
+.lenght .input-group{
+    padding: 10px;
+}
+
+.modal-button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.kitchen-sink-input{
+    display: inline;
+    width: 50%;
+}
