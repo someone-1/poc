@@ -1,20 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import DropDown from '../utils/dropdown'
 import { Link } from "react-router-dom";
 import Row from 'react-bootstrap/Row'
+import JSONPretty from 'react-json-pretty';
 
-import TextBox from '../utils/text-box'
 import Table from 'react-bootstrap/Table'
-
-import InputGroup from 'react-bootstrap/InputGroup'
-import FormControl from 'react-bootstrap/FormControl'
-import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import './admin.css';
 import { brand } from '../const'
 import Modal from '../utils/modal'
 import ModalSnippet from './snippet-modal'
+import {snippetsTable} from '../utils/snippets'
 export default class Snippet extends React.Component {
 
     constructor(props) {
@@ -48,6 +43,17 @@ export default class Snippet extends React.Component {
 
     }
     render() {
+        const tableContent = snippetsTable.map((d,i )=>{
+            return (
+                <tr key={i + d.role}>
+                  <td>{d.role}</td>
+                  <td>{d.layout || '-'}</td>
+                  <td>{d.brand}</td>
+                  <td>{d.dyn}</td>
+                  <td> <JSONPretty data={d.snippet}></JSONPretty></td>
+                </tr>
+            )
+        });
         return (
             <div>
                 <div>
@@ -76,7 +82,7 @@ export default class Snippet extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* {tableContent} */}
+                        {tableContent}
                     </tbody>
                 </Table>
                 {/* <TextBox onChange={this.handleChange} name="Details" /> */}
